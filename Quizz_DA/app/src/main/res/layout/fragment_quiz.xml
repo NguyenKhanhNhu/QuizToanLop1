@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1E2E2">
+
+    <!-- Phần nội dung câu hỏi + đáp án -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Câu hỏi"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- Đáp án A -->
+            <LinearLayout
+                android:id="@+id/layoutA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/answer_option_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvOptA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="a"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:background="@drawable/answer_bg"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/tvA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nội dung đáp án A"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/quicksand_bold" />
+            </LinearLayout>
+
+            <!-- Đáp án B -->
+            <LinearLayout
+                android:id="@+id/layoutB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/answer_option_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvOptB"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/answer_bg"
+                    android:gravity="center"
+                    android:text="b"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/tvB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nội dung đáp án B"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/quicksand_bold" />
+            </LinearLayout>
+
+            <!-- Đáp án C -->
+            <LinearLayout
+                android:id="@+id/layoutC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/answer_option_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvOptC"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/answer_bg"
+                    android:gravity="center"
+                    android:text="c"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/tvC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nội dung đáp án C"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/quicksand_bold" />
+            </LinearLayout>
+
+            <!-- Đáp án D -->
+            <LinearLayout
+                android:id="@+id/layoutD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/answer_option_bg"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvOptD"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/answer_bg"
+                    android:gravity="center"
+                    android:text="d"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/tvD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nội dung đáp án D"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/quicksand_bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Thanh button dưới cùng -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:background="#F1E2E2"
+        android:padding="8dp">
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:cornerRadius="10dp"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Quay lại" />
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:cornerRadius="10dp"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp"
+            android:backgroundTint="#FFF074"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Nộp bài" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:cornerRadius="10dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:backgroundTint="#2F3543"
+            android:textColor="@color/white"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Tiếp" />
+
+    </LinearLayout>
+
+</LinearLayout>

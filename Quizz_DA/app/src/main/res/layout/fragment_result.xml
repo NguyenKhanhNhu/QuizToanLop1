@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3">
+
+    <!-- ScrollView chứa nội dung chính -->
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/btnHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="273dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Bé đã hoàn thành bài kiểm tra!"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDiem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="163dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Bé đúng 9/10"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDiem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="93dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_diem"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="Điểm"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDiem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvScore"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvDiem"
+                    android:layout_width="92dp"
+                    android:layout_height="63dp"
+                    android:layout_marginTop="160dp"
+                    android:background="@drawable/bg_text_rs_da"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="#4F3054"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.018"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Câu 1 -->
+                <TextView
+                    android:id="@+id/tvQuestion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="24dp"
+                    android:text="Câu 1"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvCorrect1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:text="Đáp án"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <!-- Câu 2 -->
+                <TextView
+                    android:id="@+id/tvQuestion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:text="Câu 2"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvCorrect2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:text="Đáp án"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp" />
+
+                <!-- Câu 3 -->
+                <TextView
+                    android:id="@+id/tvQuestion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvCorrect3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp" />
+
+                <!-- Câu 4 -->
+                <TextView
+                    android:id="@+id/tvQuestion4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvCorrect4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <!-- Câu 5 -->
+                <TextView
+                    android:id="@+id/tvQuestion5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvCorrect5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <!-- Câu 6 -->
+                <TextView
+                    android:id="@+id/tvQuestion6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvCorrect6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <!-- Câu 7 -->
+                <TextView
+                    android:id="@+id/tvQuestion7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvCorrect7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <!-- Câu 8 -->
+                <TextView
+                    android:id="@+id/tvQuestion8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvCorrect8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <!-- Câu 9 -->
+                <TextView
+                    android:id="@+id/tvQuestion9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvCorrect9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+                <!-- Câu 10 -->
+                <TextView
+                    android:id="@+id/tvQuestion10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_white"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCorrect10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_pink"
+                    android:padding="24dp"
+                    android:textColor="#4F3054"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Nút Home tròn cố định dưới cùng -->
+    <View
+        android:layout_width="411dp"
+        android:layout_height="56dp"
+        android:background="@drawable/view_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2" />
+
+    <View
+        android:layout_width="74.5dp"
+        android:layout_height="25.2dp"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/view2_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/bg_btnhome"
+        android:contentDescription="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
