@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,8 @@ public class QuizFragment extends Fragment {
     TextView tvQuestion, tvA, tvB, tvC, tvD;
     Button btnPrev, btnNext, btnSubmit;
     LinearLayout layoutA, layoutB, layoutC, layoutD;
+    ImageView imgQuestion;
+
 
     List<CauHoi> list;
     String[] userAns;
@@ -44,6 +47,8 @@ public class QuizFragment extends Fragment {
         layoutB = v.findViewById(R.id.layoutB);
         layoutC = v.findViewById(R.id.layoutC);
         layoutD = v.findViewById(R.id.layoutD);
+
+        imgQuestion = v.findViewById(R.id.imgQuestion);
 
         // Lấy chủ đề từ Bundle
         String chuDe = "Các số đến 10"; // Giá trị mặc định
@@ -87,7 +92,7 @@ public class QuizFragment extends Fragment {
         return v;
     }
 
-    private void loadQ(int i) {
+    /*private void loadQ(int i) {
         CauHoi q = list.get(i);
         tvQuestion.setText("Câu " + (i + 1) + ": " + q.noiDung);
         tvA.setText(q.dapAnA);
@@ -110,7 +115,38 @@ public class QuizFragment extends Fragment {
             case "C": layoutC.setBackgroundResource(R.drawable.answer_option_selected_bg); break;
             case "D": layoutD.setBackgroundResource(R.drawable.answer_option_selected_bg); break;
         }
+    }*/
+    private void loadQ(int i) {
+        CauHoi q = list.get(i);
+        tvQuestion.setText("Câu " + (i + 1) + ": " + q.noiDung);
+
+        if (q.hinhAnh != 0) {
+            imgQuestion.setVisibility(View.VISIBLE);
+            imgQuestion.setImageResource(q.hinhAnh);
+        } else {
+            imgQuestion.setVisibility(View.GONE);
+        }
+
+        tvA.setText(q.dapAnA);
+        tvB.setText(q.dapAnB);
+        tvC.setText(q.dapAnC);
+        tvD.setText(q.dapAnD);
+
+        layoutA.setBackgroundResource(R.drawable.answer_option_bg);
+        layoutB.setBackgroundResource(R.drawable.answer_option_bg);
+        layoutC.setBackgroundResource(R.drawable.answer_option_bg);
+        layoutD.setBackgroundResource(R.drawable.answer_option_bg);
+
+        String ua = userAns[i];
+        if (ua == null) return;
+        switch (ua) {
+            case "A": layoutA.setBackgroundResource(R.drawable.answer_option_selected_bg); break;
+            case "B": layoutB.setBackgroundResource(R.drawable.answer_option_selected_bg); break;
+            case "C": layoutC.setBackgroundResource(R.drawable.answer_option_selected_bg); break;
+            case "D": layoutD.setBackgroundResource(R.drawable.answer_option_selected_bg); break;
+        }
     }
+
 
     private void selectAnswer(String ans) {
         // reset tất cả về mặc định

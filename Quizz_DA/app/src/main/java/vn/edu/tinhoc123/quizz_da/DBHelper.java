@@ -19,6 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "CREATE TABLE CauHoi (" +
                         "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                         "noiDung TEXT," +
+                        "hinhAnh INTEGER," +
                         "dapAnA TEXT," +
                         "dapAnB TEXT," +
                         "dapAnC TEXT," +
@@ -40,6 +41,75 @@ public class DBHelper extends SQLiteOpenHelper {
                 "'1, 7, 8, 5'," +
                 "'B'," +
                 "'Các số đến 10')");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Trong hình có bao nhiêu bịch bánh:'," +
+                "'3'," +
+                "'4'," +
+                "'5'," +
+                "'6'," +
+                "'C'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_1 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Đồng hồ dưới đây chỉ:'," +
+                "'3h'," +
+                "'4h'," +
+                "'5h'," +
+                "'6h'," +
+                "'B'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_2 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hình vẽ bên có bao nhiêu hình vuông?'," +
+                "'6'," +
+                "'5'," +
+                "'8'," +
+                "'4'," +
+                "'B'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_3 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu quả có màu vàng?'," +
+                "'3'," +
+                "'1'," +
+                "'6'," +
+                "'9'," +
+                "'A'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_4 + ")");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu con thỏ trong hình?'," +
+                "'2'," +
+                "'1'," +
+                "'6'," +
+                "'3'," +
+                "'D'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_5 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu bé chuột trong hình?'," +
+                "'2'," +
+                "'1'," +
+                "'5'," +
+                "'4'," +
+                "'D'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_6 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu hình tam giác?'," +
+                "'7'," +
+                "'5'," +
+                "'6'," +
+                "'4'," +
+                "'A'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_7 + ")");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Điền số thích hợp vào chỗ ? trong các phép so sánh: 2 > ? > 0'," +
@@ -65,9 +135,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 "'Điền số thích hợp vào chỗ ? trong các phép so sánh: 3 > ? > 1'," +
                 "'2','4','5','0','A','Các số đến 10')");
 
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'Sắp xếp các số trong dãy số sau 5, 8, 7, 1 theo thứ tự từ lớn đến bé.'," +
-                "'1, 5, 7, 8','8, 7, 5, 1','7, 8, 5, 1','1, 7, 8, 5','B','Các số đến 10')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Số nhỏ nhất trong dãy số 5, 8, 7, 1 là số nào?'," +
@@ -90,12 +157,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 "'3','2','6','9','D','Các số đến 10')");
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'7 ... 5 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 10')");
-
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'3 ... 8 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 10')");
-
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'6 ... 6 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','C','Các số đến 10')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'2 ... 9 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 10')");
@@ -550,12 +611,13 @@ public class DBHelper extends SQLiteOpenHelper {
             CauHoi q = new CauHoi();
             q.id = c.getInt(0);
             q.noiDung = c.getString(1);
-            q.dapAnA = c.getString(2);
-            q.dapAnB = c.getString(3);
-            q.dapAnC = c.getString(4);
-            q.dapAnD = c.getString(5);
-            q.dapAnDung = c.getString(6);
-            q.chuDe = c.getString(7);
+            q.hinhAnh = c.getInt(2);
+            q.dapAnA = c.getString(3);
+            q.dapAnB = c.getString(4);
+            q.dapAnC = c.getString(5);
+            q.dapAnD = c.getString(6);
+            q.dapAnDung = c.getString(7);
+            q.chuDe = c.getString(8);
             list.add(q);
         }
         c.close();
