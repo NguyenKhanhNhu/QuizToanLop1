@@ -213,9 +213,15 @@ public class DBHelper extends SQLiteOpenHelper {
                 "'Bạn Lan có 3 quả cam, được mẹ cho thêm 2 quả. Hỏi bạn Lan có bao nhiêu quả cam?'," +
                 "'4','5','6','3','B','Phép cộng phạm vi 10')");
 
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'Anh Minh có 1 chiếc bút, nhặt được thêm 4 chiếc. Hỏi anh Minh có bao nhiêu chiếc bút?'," +
-                "'4','5','6','3','B','Phép cộng phạm vi 10')");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hãy tính: '," +
+                "'6 quả cherry'," +
+                "'8 quả cherry'," +
+                "'4 quả cherry'," +
+                "'9 quả cherry'," +
+                "'D'," +
+                "'Phép cộng phạm vi 10'," +
+                R.drawable.ch_9 + ")");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Em Hoa có 2 con cá, mua thêm 3 con. Hỏi em Hoa có bao nhiêu con cá?'," +
@@ -241,13 +247,15 @@ public class DBHelper extends SQLiteOpenHelper {
                 "'Bạn Hùng có 3 con mèo, nhận thêm 4 con. Hỏi bạn Hùng có bao nhiêu con mèo?'," +
                 "'6','7','8','5','B','Phép cộng phạm vi 10')");
 
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'Chị Linh có 1 hộp bút chì, mua thêm 6 hộp. Hỏi chị Linh có bao nhiêu hộp bút chì?'," +
-                "'6','7','8','5','C','Phép cộng phạm vi 10')");
-
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'Em An có 2 quả bóng, được tặng thêm 4 quả. Hỏi em An có bao nhiêu quả bóng?'," +
-                "'5','6','7','4','B','Phép cộng phạm vi 10')");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hãy tính: '," +
+                "'6 quả lê'," +
+                "'8 quả lê'," +
+                "'9 quả lê'," +
+                "'4 quả lê'," +
+                "'C'," +
+                "'Phép cộng phạm vi 10'," +
+                R.drawable.ch_8 + ")");
 
         // Phép trừ phạm vi 10
 // Dạng a - b = ?
@@ -282,6 +290,24 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'6 - ? = 2','3','4','5','8','B','Phép trừ phạm vi 10')");
 
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hãy tính: '," +
+                "'5 quả dâu'," +
+                "'10 quả dâu'," +
+                "'4 quả dâu'," +
+                "'9 quả dâu'," +
+                "'C'," +
+                "'Phép trừ phạm vi 10'," +
+                R.drawable.ch_10 + ")");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hãy tính: '," +
+                "'5 quả nho'," +
+                "'10 quả nho'," +
+                "'6 quả nho'," +
+                "'4 quả nho'," +
+                "'D'," +
+                "'Phép trừ phạm vi 10'," +
+                R.drawable.ch_11 + ")");
 // Dạng toán có lời
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Bạn Cường có 5 quả táo, cho bạn Duyên 2 quả. Hỏi bạn Cường còn bao nhiêu quả táo?','2','3','4','5','B','Phép trừ phạm vi 10')");
@@ -320,14 +346,6 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'54 ... 54 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','C','Các số đến 100')");
 
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'95 ... 98 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 100')");
-
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'12 ... 21 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 100')");
-
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'66 ... 62 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 100')");
 
 
 // Dạng toán có lời (đa dạng tình huống)
@@ -493,7 +511,82 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Một giỏ có 8 quả táo, lấy đi 3 quả. Hỏi trong giỏ còn bao nhiêu quả táo?','6','7','5','4','C','Ôn tập học kỳ 1')");
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'Hùng có 6 quả bóng, Nam cho thêm 3 quả. Hỏi Hùng có bao nhiêu quả bóng?','10','7','8','9','D','Ôn tập học kỳ 1')");
+                "'Sắp xếp các số trong dãy số sau 5, 8, 7, 1 theo thứ tự từ lớn đến bé.'," +
+                "'1, 5, 7, 8'," +
+                "'8, 7, 5, 1'," +
+                "'7, 8, 5, 1'," +
+                "'1, 7, 8, 5'," +
+                "'B'," +
+                "'Ôn tập học kỳ 1')");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Trong hình có bao nhiêu bịch bánh:'," +
+                "'3'," +
+                "'4'," +
+                "'5'," +
+                "'6'," +
+                "'C'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_1 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Đồng hồ dưới đây chỉ:'," +
+                "'3h'," +
+                "'4h'," +
+                "'5h'," +
+                "'6h'," +
+                "'B'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_2 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hình vẽ bên có bao nhiêu hình vuông?'," +
+                "'6'," +
+                "'5'," +
+                "'8'," +
+                "'4'," +
+                "'B'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_3 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu quả có màu vàng?'," +
+                "'3'," +
+                "'1'," +
+                "'6'," +
+                "'9'," +
+                "'A'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_4 + ")");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu con thỏ trong hình?'," +
+                "'2'," +
+                "'1'," +
+                "'6'," +
+                "'3'," +
+                "'D'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_5 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu bé chuột trong hình?'," +
+                "'2'," +
+                "'1'," +
+                "'5'," +
+                "'4'," +
+                "'D'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_6 + ")");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Có bao nhiêu hình tam giác?'," +
+                "'7'," +
+                "'5'," +
+                "'6'," +
+                "'4'," +
+                "'A'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_7 + ")");
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'4 + 2 - 1 = ?','7','6','5','4','C','Ôn tập học kỳ 1')");
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
@@ -504,10 +597,24 @@ public class DBHelper extends SQLiteOpenHelper {
                 "'? + 3 = 9','7','8','5','6','D','Ôn tập học kỳ 1')");
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'8 - ? = 5','4','5','3','2','C','Ôn tập học kỳ 1')");
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'2 + 4 = ?','5','6','7','8','B','Ôn tập học kỳ 1')");
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'9 - 5 = ?','3','4','5','6','B','Ôn tập học kỳ 1')");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hãy tính: '," +
+                "'5 quả dâu'," +
+                "'10 quả dâu'," +
+                "'4 quả dâu'," +
+                "'9 quả dâu'," +
+                "'C'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_10 + ")");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Hãy tính: '," +
+                "'5 quả nho'," +
+                "'10 quả nho'," +
+                "'6 quả nho'," +
+                "'4 quả nho'," +
+                "'D'," +
+                "'Ôn tập học kỳ 1'," +
+                R.drawable.ch_11 + ")");
 
         //Ôn thi hk2
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
