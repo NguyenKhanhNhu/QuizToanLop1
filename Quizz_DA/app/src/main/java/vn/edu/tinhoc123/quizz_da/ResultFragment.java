@@ -74,8 +74,10 @@ public class ResultFragment extends Fragment {
 
         // Nút về màn hình chính
         btnHome.setOnClickListener(view -> {
-            getParentFragmentManager().popBackStack(null,
-                    androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            getParentFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, new HomeFragment())
+                    .commit();
         });
 
         return v;

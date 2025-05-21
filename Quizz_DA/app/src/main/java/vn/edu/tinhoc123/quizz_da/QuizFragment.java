@@ -140,8 +140,8 @@ public class QuizFragment extends Fragment {
             String yourTxt = ua.isEmpty() ? "(chưa chọn)" : getTextByLetter(q, ua);
             details.add(
                     "Câu " + (i + 1) + ": " + q.noiDung +
-                            "\n→ Đúng: " + q.dapAnDung + ". " + trueTxt +
-                            "\n→ Bạn: " + (ua.isEmpty() ? "-" : ua + ". " + yourTxt)
+                            "\n→ Đáp án: " + q.dapAnDung + ". " + trueTxt +
+                            "\n→ Bé chọn: " + (ua.isEmpty() ? "-" : ua + ". " + yourTxt)
             );
             if (ua.equals(q.dapAnDung)) {
                 correct++;

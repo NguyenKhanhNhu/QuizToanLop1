@@ -328,7 +328,7 @@
                     android:padding="24dp"
                     android:textColor="#4F3054"
                     android:textSize="18sp"
-                    />
+                     />
 
                 <TextView
                     android:id="@+id/tvCorrect10"

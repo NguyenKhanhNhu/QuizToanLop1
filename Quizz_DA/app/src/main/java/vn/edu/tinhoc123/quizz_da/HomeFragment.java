@@ -38,6 +38,7 @@ public class HomeFragment extends Fragment {
         getParentFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, qf)
+                .addToBackStack(null)
                 .commit();
     }
 }
