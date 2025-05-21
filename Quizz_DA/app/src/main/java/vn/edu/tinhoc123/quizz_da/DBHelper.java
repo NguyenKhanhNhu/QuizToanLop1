@@ -88,6 +88,21 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Số lớn nhất trong dãy số 9, 3, 6, 8, 2, 7 là số nào?'," +
                 "'3','2','6','9','D','Các số đến 10')");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
+                "'7 ... 5 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 10')");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
+                "'3 ... 8 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 10')");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
+                "'6 ... 6 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','C','Các số đến 10')");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
+                "'2 ... 9 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 10')");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
+                "'10 ... 1 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 10')");
+
 
 // Phép cộng phạm vi 10
         // Dạng a + b = ?
@@ -221,38 +236,38 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Chị Hà có 10 quyển sách, cho bạn 6 quyển. Hỏi chị Hà còn bao nhiêu quyển sách?','3','4','5','6','B','Phép trừ phạm vi 10')");
-
-// Các số đến 100
-// Dạng điền dấu >, <, =
+        //các số đến 100
+        //dang < > =
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'42 ... 38 (Chọn dấu >, <, hoặc =)','<','>','=','D','B','Các số đến 100')");
-
-        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'19 ... 25 (Chọn dấu >, <, hoặc =)','<','>','=','D','A','Các số đến 100')");
+                "'42 ... 38 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'77 ... 77 (Chọn dấu >, <, hoặc =)','<','>','=','D','C','Các số đến 100')");
+                "'19 ... 25 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'63 ... 59 (Chọn dấu >, <, hoặc =)','<','>','=','D','B','Các số đến 100')");
+                "'77 ... 77 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','C','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'88 ... 92 (Chọn dấu >, <, hoặc =)','<','>','=','D','A','Các số đến 100')");
+                "'63 ... 59 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'31 ... 28 (Chọn dấu >, <, hoặc =)','<','>','=','D','B','Các số đến 100')");
+                "'88 ... 92 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'54 ... 54 (Chọn dấu >, <, hoặc =)','<','>','=','D','C','Các số đến 100')");
+                "'31 ... 28 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'95 ... 98 (Chọn dấu >, <, hoặc =)','<','>','=','D','A','Các số đến 100')");
+                "'54 ... 54 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','C','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'12 ... 21 (Chọn dấu >, <, hoặc =)','<','>','=','D','A','Các số đến 100')");
+                "'95 ... 98 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 100')");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
-                "'66 ... 62 (Chọn dấu >, <, hoặc =)','<','>','=','D','B','Các số đến 100')");
+                "'12 ... 21 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','A','Các số đến 100')");
+
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
+                "'66 ... 62 (Chọn dấu >, <, hoặc =)','<','>','=','Không rõ','B','Các số đến 100')");
+
 
 // Dạng toán có lời (đa dạng tình huống)
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
