@@ -110,6 +110,15 @@ public class DBHelper extends SQLiteOpenHelper {
                 "'A'," +
                 "'Các số đến 10'," +
                 R.drawable.ch_7 + ")");
+        db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe, hinhAnh) VALUES (" +
+                "'Đếm:'," +
+                "'4 bịch bánh, 10 hộp bánh, 1 hộp sữa'," +
+                "'5 bịch bánh, 2 hộp bánh, 1 hộp sữa'," +
+                "'1 bịch bánh, 5 hộp bánh, 4 hộp sữa'," +
+                "'0 bịch bánh, 4 hộp bánh, 3 hộp sữa'," +
+                "'A'," +
+                "'Các số đến 10'," +
+                R.drawable.ch_12 + ")");
 
         db.execSQL("INSERT INTO CauHoi (noiDung, dapAnA, dapAnB, dapAnC, dapAnD, dapAnDung, chuDe) VALUES (" +
                 "'Điền số thích hợp vào chỗ ? trong các phép so sánh: 2 > ? > 0'," +
