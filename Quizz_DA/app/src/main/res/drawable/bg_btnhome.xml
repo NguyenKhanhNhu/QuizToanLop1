@@ -6,7 +6,7 @@
 
     <!-- Vòng tròn nền -->
     <path
-        android:fillColor="#BF94A1"
+        android:fillColor="#CDD79B"
         android:pathData="M28,0A28,28 0 1,0 28,56A28,28 0 1,0 28,0Z" />
 
     <!-- Icon home căn giữa -->

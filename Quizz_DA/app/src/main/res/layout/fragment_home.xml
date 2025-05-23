@@ -41,9 +41,6 @@
             android:clipChildren="false"
             android:clipToPadding="false">
 
-            <!-- Các nút giữ nguyên layout constraint -->
-
-
             <Button
                 android:id="@+id/btnSoDen10"
                 android:layout_width="152dp"
