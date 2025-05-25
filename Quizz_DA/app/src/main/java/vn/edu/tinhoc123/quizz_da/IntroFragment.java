@@ -25,8 +25,9 @@ public class IntroFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment homeFragment = new HomeFragment();
-                getParentFragmentManager().beginTransaction()
+                requireActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, homeFragment)
+                        .addToBackStack(null)
                         .commit();
             }
         });

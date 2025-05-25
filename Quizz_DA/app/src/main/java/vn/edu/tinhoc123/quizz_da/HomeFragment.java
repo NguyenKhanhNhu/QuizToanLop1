@@ -1,11 +1,13 @@
 package vn.edu.tinhoc123.quizz_da;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class HomeFragment extends Fragment {
 
@@ -22,6 +24,12 @@ public class HomeFragment extends Fragment {
         ganSuKien(v, R.id.btnOnTapHK1, "Ôn tập học kỳ 1");
         ganSuKien(v, R.id.btnOnTapHK2, "Ôn tập học kỳ 2");
 
+        ImageButton btnTheory = v.findViewById(R.id.btnTheory);
+        btnTheory.setOnClickListener(x -> {
+            Intent intent = new Intent(getContext(), LtActivity.class);
+            startActivity(intent);
+        });
+
         return v;
     }
 
@@ -35,9 +43,10 @@ public class HomeFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString("chuDe", chuDe);
         qf.setArguments(args);
-        getParentFragmentManager()
+        requireActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, qf)
+                .addToBackStack(null)
                 .commit();
     }
 }

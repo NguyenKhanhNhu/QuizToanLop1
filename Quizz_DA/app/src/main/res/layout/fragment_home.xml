@@ -7,16 +7,18 @@
     tools:context=".MainActivity">
 
     <!-- View làm nền trên cùng -->
+
+    <!-- ScrollView chứa các nút -->
+
     <View
         android:id="@+id/viewHeader"
         android:layout_width="0dp"
         android:layout_height="127dp"
         android:background="@drawable/bg1"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- ScrollView chứa các nút -->
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollHome"
@@ -300,12 +302,12 @@
 
     <TextView
         android:id="@+id/tv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
+        android:layout_width="339dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="1dp"
         android:fontFamily="@font/quicksand_semibold"
-        android:text="Cùng khám phá những câu hỏi toán vui nhộn và bổ ích."
+        android:text="Toán học cũng đáng yêu như bé!"
         android:textColor="#8370A8"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="@+id/viewHeader"
@@ -315,17 +317,28 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
+        android:layout_width="340dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/quicksand_semibold"
         android:text="Bé chọn chủ đề yêu thích để học và luyện tập nhé!"
         android:textColor="#8370A8"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="@+id/viewHeader"
         app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+    <ImageButton
+        android:id="@+id/btnTheory"
+        android:layout_width="93dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_lt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
